@@ -29,12 +29,12 @@ set incsearch
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
-  colorscheme IR_black-custom
+  colorscheme ir_black-custom
 "  colorscheme macvim
   set number
 endif
 
-colorscheme IR_black-custom
+colorscheme ir_black-custom
 set number
 
 
