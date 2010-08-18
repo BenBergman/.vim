@@ -34,6 +34,10 @@ if has("gui_running")
   set number
 endif
 
+colorscheme IR_black-custom
+set number
+
+
 " speelcheck
 if has('gui_running')
   set spell
