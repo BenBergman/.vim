@@ -2,7 +2,8 @@ set nocp  "turns off Vi compatibility (always keep at top as it changes lots of 
 "set noea  "windows retain their size when a pane is opened or closed
 syn on    "syntax highlighting
 
-au BufNewFile,BufRead *.pde setfiletype java
+"au BufNewFile,BufRead *.pde setfiletype java
+au BufNewFile,BufRead *.pde setlocal ft=arduino
 au BufNewFile,BufRead *.tex set syntax=tex
 
 
