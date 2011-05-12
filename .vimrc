@@ -1,5 +1,8 @@
 set nocp  "turns off Vi compatibility (always keep at top as it changes lots of settings)
 "set noea  "windows retain their size when a pane is opened or closed
+
+"turn on doxygen syntax highlighting
+let g:load_doxygen_syntax=1
 syn on    "syntax highlighting
 
 "au BufNewFile,BufRead *.pde setfiletype java
@@ -29,7 +32,12 @@ set hlsearch
 set incsearch
 
 if has("gui_running")
-  set fuoptions=maxvert,maxhorz
+  if has('unix')
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+      set fuoptions=maxvert,maxhorz
+    endif
+  endif
   colorscheme ir_black-custom
 "  colorscheme macvim
   set number
