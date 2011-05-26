@@ -9,6 +9,8 @@ syn on    "syntax highlighting
 au BufNewFile,BufRead *.pde setlocal ft=arduino
 au BufNewFile,BufRead *.tex set syntax=tex
 
+"automatically change working directory to directory containing buffer
+autocmd BufEnter * lcd %:p:h
 
 set softtabstop=2
 set shiftwidth=2
