@@ -83,6 +83,8 @@ nnoremap <C-n> :NERDTreeToggle<return>
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 
-
+" enable mouse right clicking (not needed in macvim, not sure if still
+" compatible)
+set mousemodel=popup
 
 
