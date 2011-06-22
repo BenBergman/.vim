@@ -122,6 +122,8 @@ bufexplorer-windowlayout	bufexplorer.txt	/*bufexplorer-windowlayout*
 bufexplorer.txt	bufexplorer.txt	/*bufexplorer.txt*
 buffer-explorer	bufexplorer.txt	/*buffer-explorer*
 config/rails.vim	rails.txt	/*config\/rails.vim*
+cs	surround.txt	/*cs*
+ds	surround.txt	/*ds*
 ex-visincr-I	visincr.txt	/*ex-visincr-I*
 ex-visincr-IA	visincr.txt	/*ex-visincr-IA*
 ex-visincr-ID	visincr.txt	/*ex-visincr-ID*
@@ -159,6 +161,8 @@ g:rails_syntax	rails.txt	/*g:rails_syntax*
 g:rails_tabstop	rails.txt	/*g:rails_tabstop*
 g:rails_url	rails.txt	/*g:rails_url*
 g:visincr_datedivset	visincr.txt	/*g:visincr_datedivset*
+i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
+i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
 matchit	matchit.txt	/*matchit*
 matchit-%	matchit.txt	/*matchit-%*
@@ -330,10 +334,20 @@ rails-tabs	rails.txt	/*rails-tabs*
 rails-template-types	rails.txt	/*rails-template-types*
 rails-vim-integration	rails.txt	/*rails-vim-integration*
 rails.txt	rails.txt	/*rails.txt*
+surround	surround.txt	/*surround*
+surround-author	surround.txt	/*surround-author*
+surround-customizing	surround.txt	/*surround-customizing*
+surround-issues	surround.txt	/*surround-issues*
+surround-mappings	surround.txt	/*surround-mappings*
+surround-replacements	surround.txt	/*surround-replacements*
+surround-targets	surround.txt	/*surround-targets*
+surround.txt	surround.txt	/*surround.txt*
+vS	surround.txt	/*vS*
 v_[%	matchit.txt	/*v_[%*
 v_]%	matchit.txt	/*v_]%*
 v_a%	matchit.txt	/*v_a%*
 v_g%	matchit.txt	/*v_g%*
+vgS	surround.txt	/*vgS*
 viscinr-I	visincr.txt	/*viscinr-I*
 viscinr-contents	visincr.txt	/*viscinr-contents*
 visincr	visincr.txt	/*visincr*
@@ -375,3 +389,8 @@ visincr-raggedright	visincr.txt	/*visincr-raggedright*
 visincr-restrict	visincr.txt	/*visincr-restrict*
 visincr-usage	visincr.txt	/*visincr-usage*
 visincr.txt	visincr.txt	/*visincr.txt*
+vs	surround.txt	/*vs*
+yS	surround.txt	/*yS*
+ySS	surround.txt	/*ySS*
+ys	surround.txt	/*ys*
+yss	surround.txt	/*yss*
