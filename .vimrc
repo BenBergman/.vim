@@ -90,8 +90,6 @@ hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NO
 set mousemodel=popup
 
 
-if b:current_syntax == "matlab"
-  filetype indent on
-endif
+autocmd BufRead,BufNewFile *.m    filetype indent on
 
 autocmd BufEnter *.m    compiler mlint
