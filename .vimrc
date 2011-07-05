@@ -53,7 +53,9 @@ set number
 if has('gui_running')
   set spell
 else
-  " if can get spell check without having block highlighting, replace this
+  " block hilighting can be annoying, but most languages now only check
+  " comments and literal strings so I have enabled for cli use
+  set spell
 endif 
 
 " Enable tab complete for COMMANDS.
@@ -88,3 +90,8 @@ hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NO
 set mousemodel=popup
 
 
+if b:current_syntax == "matlab"
+  filetype indent on
+endif
+
+autocmd BufEnter *.m    compiler mlint
