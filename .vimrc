@@ -75,8 +75,10 @@ set cindent
 set go-=T   " aside: go = guioptions
 
 " default window size
-set lines=40
-set columns=100
+if has('gui_running')
+  set lines=40
+  set columns=120
+endif
 
 nnoremap <C-z> :set foldmethod=indent<return>
 
@@ -90,6 +92,11 @@ hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NO
 set mousemodel=popup
 
 
-autocmd BufRead,BufNewFile *.m    filetype indent on
+filetype indent on
 
 autocmd BufEnter *.m    compiler mlint
+
+" Octave Syntax
+augroup filetypedetect
+  au! BufRead,BufNewFile *.m    setfiletype octave
+augroup END
