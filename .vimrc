@@ -100,3 +100,11 @@ autocmd BufEnter *.m    compiler mlint
 augroup filetypedetect
   au! BufRead,BufNewFile *.m    setfiletype octave
 augroup END
+
+" Allow sudo writing of files
+cmap w!! w !sudo tee >/dev/null %
+
+" Lock cursor to percentage of window
+let g:scrollfix=45
+let g:fixeof=0
+let g:scrollinfo=1
