@@ -76,8 +76,8 @@ set go-=T   " aside: go = guioptions
 
 " default window size
 if has('gui_running')
-  set lines=40
-  set columns=120
+  set lines=35
+  set columns=110
 endif
 
 nnoremap <C-z> :set foldmethod=indent<return>
@@ -105,6 +105,27 @@ augroup END
 cmap w!! w !sudo tee >/dev/null %
 
 " Lock cursor to percentage of window
-let g:scrollfix=45
+let g:scrollfix=55
 let g:fixeof=0
 let g:scrollinfo=1
+
+
+set tags+=tags;/
+set spelllang=en,fromtags
+cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags
+
+" Toggle Tag List
+let Tlist_Use_Right_Window=1
+"let Tlist_Sort_Type = "name"
+nnoremap <silent> <c-c> :TlistToggle<cr>
+
+" For use in : mode
+" Allows running a command within a C/C++/Java function
+cmap ;tf ?^{??(?,/^}/
+
+" DoxygenToolkit
+let g:DoxygenToolkit_authorName="Benjamin Bergman"
+
+if filereadable("~/.vim/.vimrc.work")
+  source ~/.vim/.vimrc.work
+endif
