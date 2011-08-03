@@ -53,7 +53,7 @@ set number
 if has('gui_running')
   set spell
 else
-  " block hilighting can be annoying, but most languages now only check
+  " block highlighting can be annoying, but most languages now only check
   " comments and literal strings so I have enabled for cli use
   set spell
 endif 

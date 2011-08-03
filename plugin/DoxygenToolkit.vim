@@ -754,6 +754,18 @@ function! <SID>DoxygenCommentFunc()
   " Mark the line where the cursor will be positionned.
   mark d
 
+  " Author
+  if( g:DoxygenToolkit_compactDoc =~ "yes" )
+    let s:insertEmptyLine = 0
+  else
+    let s:insertEmptyLine = 1
+  endif
+  if( s:insertEmptyLine == 1 )
+    exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
+    let s:insertEmptyLine = 0
+  endif
+  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_authorName
+
   " Arguments/parameters
   if( g:DoxygenToolkit_compactDoc =~ "yes" )
     let s:insertEmptyLine = 0
@@ -798,17 +810,6 @@ function! <SID>DoxygenCommentFunc()
       exec "normal o".s:interCommentTag.g:DoxygenToolkit_throwTag_pre.param.g:DoxygenToolkit_throwTag_post
     endfor
   endif
-
-  if( g:DoxygenToolkit_compactDoc =~ "yes" )
-    let s:insertEmptyLine = 0
-  else
-    let s:insertEmptyLine = 1
-  endif
-  if( s:insertEmptyLine == 1 )
-    exec "normal o".substitute( s:interCommentTag, "[[:blank:]]*$", "", "" )
-    let s:insertEmptyLine = 0
-  endif
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_authorName
 
   " End (if any) of documentation block.
   if( s:endCommentTag != "" )
