@@ -68,6 +68,8 @@ $includefile$   = doxygen.cpp.templates
 
 == FILE-header == start ==
 /**
+ * =====================================================================================
+ *
  *       @file  $FILE$
  *      @brief  <CURSOR>
  *        @par  Copyright:
@@ -82,7 +84,6 @@ $includefile$   = doxygen.cpp.templates
  *
  * =====================================================================================
  */
-
 #--------------------------------------------------------------
 == brief-after-member == append ==
  /**< @brief <CURSOR> */
