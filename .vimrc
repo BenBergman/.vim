@@ -1,4 +1,14 @@
 set nocp  "turns off Vi compatibility (always keep at top as it changes lots of settings)
+
+" Determine operating system
+if has('unix')
+  let s:os = substitute(system("uname"), "\n", "", "")
+  if s:os == "Darwin"
+    s:os == "Mac"
+else
+  let s:os = "Windows"
+endif
+
 "set noea  "windows retain their size when a pane is opened or closed
 
 "turn on doxygen syntax highlighting
@@ -38,24 +48,12 @@ set incsearch
 colorscheme ir_black-custom
 set number
 
-if has("gui_running")
-  if has('unix')
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-      " Mac only settings
-      set fuoptions=maxvert,maxhorz
-      "colorscheme macvim
-    else
-      " Linux only settings
-    endif
-    " Mac and Linux only settings
-  else
-    " Windows only settings
-  endif
-  " GUI only settings
-else
-  " Terminal only settings
+
+if Platform() == "Mac"
+  set fuoptions=maxvert,maxhorz
+  "colorscheme macvim
 endif
+
 
 " speelcheck
 if has('gui_running')
@@ -151,3 +149,29 @@ function! TwiddleCase(str)
   return result
 endfunction
 vnoremap ~ ygv"=TwiddleCase(@")<CR>Pgv
+
+
+" Set a cursor column highlight
+"set cursorcolumn  " disabled because it introduces noticeable lag when
+                   " holding 'h' and 'l'
+" Set a cursor line highlight
+"set cursorline
+
+
+" Allow switching of buffer without saving
+" Also retains undo history
+set hidden
+
+
+" use 256 colour terminal
+set t_Co=256
+
+
+" Persistent undo (vim 7.3 and newer)
+try
+  set undodir=$HOME/.vim/undodir "does this work in Windows?
+  set undofile
+catch
+endtry
+
+
