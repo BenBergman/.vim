@@ -5,6 +5,7 @@ if has('unix')
   let s:os = substitute(system("uname"), "\n", "", "")
   if s:os == "Darwin"
     s:os == "Mac"
+  endif
 else
   let s:os = "Windows"
 endif
@@ -45,11 +46,20 @@ set hlsearch
 set incsearch
 
 
-colorscheme ir_black-custom
+" Use 256 colour terminal
+" Make sure to declare this before loading a colorscheme
+set t_Co=256
+
+if has('gui_running')
+  colorscheme ir_black-custom
+else
+  colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+endif
+
 set number
 
 
-if Platform() == "Mac"
+if s:os == "Mac"
   set fuoptions=maxvert,maxhorz
   "colorscheme macvim
 endif
@@ -163,8 +173,6 @@ vnoremap ~ ygv"=TwiddleCase(@")<CR>Pgv
 set hidden
 
 
-" use 256 colour terminal
-set t_Co=256
 
 
 " Persistent undo (vim 7.3 and newer)
@@ -175,3 +183,9 @@ catch
 endtry
 
 
+" When .vimrc is edited, reload it
+if has('unix')
+  autocmd! bufwritepost .vimrc source ~/.vimrc
+else " Windows
+  autocmd! bufwritepost _vimrc source $HOME/_vimrc " has not been verified
+endif
