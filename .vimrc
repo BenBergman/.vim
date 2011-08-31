@@ -134,7 +134,10 @@ set scrolloff=4
 
 " Spell check ignore tags
 set tags+=tags;/
-set spelllang=en,fromtags
+set spelllang=en
+if filereadable("~/.vim/spell/fromtags.utf-8.spl")
+  set spelllang+=fromtags
+endif
 cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags
 
 " taglist plugin settings
