@@ -92,8 +92,13 @@ set go-=T   " aside: go = guioptions
 
 " default window size
 if has('gui_running')
-  set lines=35
-  set columns=110
+  if exists("g:existingWindow") 
+    " prevents window from resizing if it is not a new window
+  else
+    let g:existingWindow=1
+    set lines=35
+    set columns=110
+  endif
 endif
 
 nnoremap <C-z> :set foldmethod=indent<return>
@@ -123,6 +128,9 @@ cmap w!! w !sudo tee >/dev/null %
 let g:scrollfix=55
 let g:fixeof=0
 let g:scrollinfo=1
+
+" Keep x number of lines visible above and below the cursor
+set scrolloff=4
 
 " Spell check ignore tags
 set tags+=tags;/
