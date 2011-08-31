@@ -138,7 +138,7 @@ set spelllang=en
 if filereadable("~/.vim/spell/fromtags.utf-8.spl")
   set spelllang+=fromtags
 endif
-cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags
+cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags; set spelllang+=fromtags
 
 " taglist plugin settings
 " Toggle Tag List
