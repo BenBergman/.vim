@@ -159,17 +159,20 @@ endif
 
 
 " TwiddleCase
-function! TwiddleCase(str)
-  if a:str ==# toupper(a:str)
-    let result = tolower(a:str)
-  elseif a:str ==# tolower(a:str)
-    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
-  else
-    let result = toupper(a:str)
-  endif
-  return result
-endfunction
-vnoremap ~ ygv"=TwiddleCase(@")<CR>Pgv
+" disabled because:
+" - breaks in visual block mode over multiple lines
+" - does not include original capitalization or inverted in cycle
+"function! TwiddleCase(str)
+"  if a:str ==# toupper(a:str)
+"    let result = tolower(a:str)
+"  elseif a:str ==# tolower(a:str)
+"    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+"  else
+"    let result = toupper(a:str)
+"  endif
+"  return result
+"endfunction
+"vnoremap ~ ygv"=TwiddleCase(@")<CR>Pgv
 
 
 " Set a cursor column highlight
