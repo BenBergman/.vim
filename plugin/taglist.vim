@@ -2602,6 +2602,7 @@ function! s:Tlist_Window_Open()
 
     " Highlight the current tag
     call s:Tlist_Window_Highlight_Tag(curbuf_name, cur_lnum, 1, 1)
+    setlocal nospell
 endfunction
 
 " Tlist_Window_Toggle()
