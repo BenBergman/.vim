@@ -158,6 +158,13 @@ hi link GlobalVariable  Identifier
 hi link LocalVariable   Identifier
 " end ctags-highlighting
 
+" For taglist plugin
+hi link TagListComment  String
+hi link TagListFileName Statement
+hi link TagListTitle    Directory
+hi link TagListTagScope Special
+" end taglist
+
 
 " Special for Ruby
 hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
