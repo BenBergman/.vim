@@ -61,7 +61,7 @@ filetype plugin indent on     " required for vundle
 if has('unix')
   let s:os = substitute(system("uname"), "\n", "", "")
   if s:os == "Darwin"
-    s:os == "Mac"
+    let s:os = "Mac"
   endif
 else
   let s:os = "Windows"
