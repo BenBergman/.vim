@@ -213,8 +213,8 @@ cmap ;tf ?^{??(?,/^}/
 " DoxygenToolkit settings
 let g:DoxygenToolkit_authorName="Benjamin Bergman"
 
-if filereadable("~/.vim/.vimrc.work")
-  source ~/.vim/.vimrc.work
+if filereadable("~/.vim/.vimrc.local")
+  source ~/.vim/.vimrc.local
 endif
 
 
