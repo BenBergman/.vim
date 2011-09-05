@@ -1,4 +1,16 @@
 set nocompatible  "turns off Vi compatibility (always keep at top as it changes lots of settings)
+
+" Determine operating system
+if has('unix')
+  let s:os = substitute(system("uname"), "\n", "", "")
+  if s:os == "Darwin"
+    let s:os = "Mac"
+  endif
+else
+  let s:os = "Windows"
+  set runtimepath^=~/.vim
+endif
+
 filetype on       "needed for vim on mac?
 filetype off      "required for vundle
 
@@ -36,7 +48,7 @@ Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'git://git.wincent.com/command-t.git'
 " colour schemes
 Bundle 'freya'
-"Bundle 'guns/jellyx.vim'
+Bundle 'guns/jellyx.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
@@ -56,16 +68,6 @@ filetype plugin indent on     " required for vundle
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
-
-" Determine operating system
-if has('unix')
-  let s:os = substitute(system("uname"), "\n", "", "")
-  if s:os == "Darwin"
-    let s:os = "Mac"
-  endif
-else
-  let s:os = "Windows"
-endif
 
 "set noea  "windows retain their size when a pane is opened or closed
 
@@ -110,13 +112,14 @@ set t_Co=256
 if has('gui_running')
   colorscheme ir_black-custom
 else
-  colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+  "colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+  colorscheme jellyx "only until I update ir_black-custom to work with 256 colour terminals
 endif
 
 set number
 
 
-if s:os == "Mac"
+if has('gui_running') && s:os == "Mac"
   set fuoptions=maxvert,maxhorz
   "colorscheme macvim
 endif
@@ -260,3 +263,30 @@ if has('unix')
 else " Windows
   autocmd! bufwritepost _vimrc source $HOME/_vimrc " has not been verified
 endif
+
+" Invert number/symbol keys while in insert mode {{{
+" You aren't hard coding your variables, are you?
+
+inoremap 1 !
+inoremap 2 @
+inoremap 3 #
+inoremap 4 $
+inoremap 5 %
+inoremap 6 ^
+inoremap 7 &
+inoremap 8 *
+inoremap 9 (
+inoremap 0 )
+
+inoremap ! 1
+inoremap @ 2
+inoremap # 3
+inoremap $ 4
+inoremap % 5
+inoremap ^ 6
+inoremap & 7
+inoremap * 8
+inoremap ( 9
+inoremap ) 0
+
+" }}}
