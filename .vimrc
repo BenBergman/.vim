@@ -1,4 +1,20 @@
 set nocompatible  "turns off Vi compatibility (always keep at top as it changes lots of settings)
+
+""" Determine operating system {{{
+
+if has('unix')
+  let s:os = substitute(system("uname"), "\n", "", "")
+  if s:os == "Darwin"
+    let s:os = "Mac"
+  endif
+else
+  let s:os = "Windows"
+endif
+
+"}}}
+
+""" Vundle Settings {{{
+
 filetype on       "needed for vim on mac?
 filetype off      "required for vundle
 
@@ -36,7 +52,7 @@ Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'git://git.wincent.com/command-t.git'
 " colour schemes
 Bundle 'freya'
-"Bundle 'guns/jellyx.vim'
+Bundle 'guns/jellyx.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
@@ -44,7 +60,6 @@ Bundle 'BenBergman/ir_black-custom'
 " syntax
 " TODO: get this bundle working: Bundle 'Anduino-syntax-file'
 Bundle 'vbnet.vim'
-" ...
 
 filetype plugin indent on     " required for vundle
 "
@@ -57,15 +72,7 @@ filetype plugin indent on     " required for vundle
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
-" Determine operating system
-if has('unix')
-  let s:os = substitute(system("uname"), "\n", "", "")
-  if s:os == "Darwin"
-    s:os == "Mac"
-  endif
-else
-  let s:os = "Windows"
-endif
+"}}}
 
 "set noea  "windows retain their size when a pane is opened or closed
 
@@ -85,10 +92,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
-"helptags ~/.vim/doc
-
 "network
-filetype plugin on
 let NERDTreeShowHidden=1
 
 " scrollbars
@@ -110,7 +114,8 @@ set t_Co=256
 if has('gui_running')
   colorscheme ir_black-custom
 else
-  colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+  "colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+  colorscheme jellyx "only until I update ir_black-custom to work with 256 colour terminals
 endif
 
 set number
@@ -168,7 +173,6 @@ nnoremap <C-n> :NERDTreeToggle<return>
 set mousemodel=popup
 
 
-filetype indent on
 
 autocmd BufEnter *.m    compiler mlint
 
