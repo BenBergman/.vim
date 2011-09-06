@@ -9,10 +9,10 @@ if has('unix')
   endif
 else
   let s:os = "Windows"
+  set runtimepath^=~/.vim
 endif
 
 "}}}
-
 """ Vundle Settings {{{
 
 filetype on       "needed for vim on mac?
@@ -121,7 +121,7 @@ endif
 set number
 
 
-if s:os == "Mac"
+if has('gui_running') && s:os == "Mac"
   set fuoptions=maxvert,maxhorz
   "colorscheme macvim
 endif
@@ -264,3 +264,30 @@ if has('unix')
 else " Windows
   autocmd! bufwritepost _vimrc source $HOME/_vimrc " has not been verified
 endif
+
+" Invert number/symbol keys while in insert mode {{{
+" You aren't hard coding your variables, are you?
+
+inoremap 1 !
+inoremap 2 @
+inoremap 3 #
+inoremap 4 $
+inoremap 5 %
+inoremap 6 ^
+inoremap 7 &
+inoremap 8 *
+inoremap 9 (
+inoremap 0 )
+
+inoremap ! 1
+inoremap @ 2
+inoremap # 3
+inoremap $ 4
+inoremap % 5
+inoremap ^ 6
+inoremap & 7
+inoremap * 8
+inoremap ( 9
+inoremap ) 0
+
+" }}}
