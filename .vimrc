@@ -29,7 +29,7 @@ Bundle 'abudden/TagHighlight'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
