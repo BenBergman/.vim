@@ -52,9 +52,9 @@ Bundle 'guns/jellyx.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
-" TODO: get this bundle working: Bundle 'BenBergman/jellyx'
+Bundle 'BenBergman/jellyx.vim'
 " syntax
-" TODO: get this bundle working: Bundle 'Anduino-syntax-file'
+Bundle 'Arduino-syntax-file'
 Bundle 'vbnet.vim'
 " ...
 
