@@ -15,9 +15,10 @@ else
 endif
 " }}} 
 " 3. Vundle and Bundle configuration 
-if filereadable("~/.vim/bundles.vim")
+try
   source ~/.vim/bundles.vim
-endif
+catch
+endtry
 " }}} 
 
 "set noea  "windows retain their size when a pane is opened or closed

@@ -36,7 +36,7 @@ Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'git://git.wincent.com/command-t.git'
 " colour schemes
 Bundle 'freya'
-Bundle 'guns/jellyx.vim'
+"Bundle 'guns/jellyx.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
