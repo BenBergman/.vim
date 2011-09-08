@@ -38,10 +38,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
-"helptags ~/.vim/doc
-
 "network
-filetype plugin on
 let NERDTreeShowHidden=1
 
 " scrollbars
@@ -122,7 +119,6 @@ nnoremap <C-n> :NERDTreeToggle<return>
 set mousemodel=popup
 
 
-filetype indent on
 
 autocmd BufEnter *.m    compiler mlint
 
