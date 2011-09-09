@@ -1,3 +1,4 @@
+set nocompatible  "turns off Vi compatibility (always keep at top as it changes lots of settings)
 
 filetype on       "needed for vim on mac?
 filetype off      "required for vundle
