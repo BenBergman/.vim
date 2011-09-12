@@ -33,6 +33,7 @@ Bundle 'abudden/TagHighlight'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
+Bundle 'ervandew/taglisttoo'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -133,6 +134,7 @@ if has('gui_running')
 else
   " block highlighting can be annoying, but most languages now only check
   " comments and literal strings so I have enabled for cli use
+  " jellx colorscheme also does an ok job with spellcheck indication
   set spell
 endif
 
@@ -201,11 +203,17 @@ if filereadable("~/.vim/spell/fromtags.utf-8.spl")
 endif
 cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags; set spelllang+=fromtags
 
-" taglist plugin settings
+"" taglist plugin settings
+"" Toggle Tag List
+"let Tlist_Use_Right_Window=1
+"let Tlist_Sort_Type = "name"
+"nnoremap <silent> <c-c> :TlistToggle<cr>
+
+" taglisttoo plugin settings
 " Toggle Tag List
-let Tlist_Use_Right_Window=1
+let g:TaglistTooPosition='right'
 let Tlist_Sort_Type = "name"
-nnoremap <silent> <c-c> :TlistToggle<cr>
+nnoremap <silent> <c-c> :TlistToo<cr>
 
 " For use in : mode
 " Allows running a command within a C/C++/Java function
@@ -214,8 +222,8 @@ cmap ;tf ?^{??(?,/^}/
 " DoxygenToolkit settings
 let g:DoxygenToolkit_authorName="Benjamin Bergman"
 
-if filereadable("~/.vim/.vimrc.work")
-  source ~/.vim/.vimrc.work
+if filereadable("~/.vim/.vimrc.local")
+  source ~/.vim/.vimrc.local
 endif
 
 
