@@ -19,7 +19,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
-Bundle 'ervandew/taglisttoo'
+"Bundle 'ervandew/taglisttoo'
 Bundle 'xolox/vim-shell'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}

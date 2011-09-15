@@ -147,7 +147,7 @@ set spelllang=en
 if filereadable("~/.vim/spell/fromtags.utf-8.spl")
   set spelllang+=fromtags
 endif
-cmap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags; set spelllang+=fromtags
+cnoremap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags; set spelllang+=fromtags
 
 "" taglist plugin settings
 "" Toggle Tag List
@@ -213,11 +213,17 @@ endtry
 
 
 " When .vimrc is edited, reload it
-if has('unix') " TODO: Moved to .vimrc at the top of this file, so a single command might suffice
+" TODO: Moved to .vimrc at the top of this file, so a single command might suffice
+if has('unix') 
   autocmd! bufwritepost .vimrc source ~/.vimrc
 else " Windows
   autocmd! bufwritepost _vimrc source $HOME/_vimrc " has not been verified
 endif
+
+
+" Common typo correction
+cnoremap W w
+
 
 " Invert number/symbol keys while in insert mode {{{
 " You aren't hard coding your variables, are you?
