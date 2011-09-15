@@ -212,6 +212,12 @@ catch
 endtry
 
 
+" start in full screen mode (requires shell.vim)
+if has('gui_running') && !xolox#shell#is_fullscreen()
+  Fullscreen
+endif
+
+
 " When .vimrc is edited, reload it
 if has('unix')
   autocmd! bufwritepost .vimrc source ~/.vimrc
