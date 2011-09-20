@@ -98,7 +98,10 @@ set tabstop=2
 set shiftwidth=2
 
 " disables toolbar
-set go-=T   " aside: go = guioptions
+set guioptions-=T
+
+" disables menubar
+set guioptions-=m
 
 " default window size
 if has('gui_running')
@@ -222,9 +225,45 @@ endif
 
 
 " Common typo correction
-cnoremap W w
+function! W()
+  w
+endfunction
 
 
+" Takes whatever was last searched for and does
+" a find and replace for what you type next
+" Useful with the * command
+map <leader>r <Esc>:%s/<C-r>///g<left><left>
+
+
+" Make the enter key temporarily clear the search highlighting
+nnoremap <CR> :noh<CR><CR> " extra <CR> retains stock functionality
+
+
+" Make wrapped lines act nicer {{{
+
+" Let partial lines scroll at window edges
+set display+=lastline
+
+" Make wrapped lines look nicer (or at least easier to spot)
+" TODO: make the count a function of the current indenting level and tabstop
+let &showbreak=repeat(' .', 10)
+
+" Swap g <j|k> with <j|k>
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+" }}}
+" Map <C-?> to navigate windows (where ? is each of hjkl) {{{
+
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+
+" }}}
 " Invert number/symbol keys while in insert mode {{{
 " You aren't hard coding your variables, are you?
 

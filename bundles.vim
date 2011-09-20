@@ -14,7 +14,8 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'mileszs/ack.vim'
-Bundle 'abudden/TagHighlight'
+"Bundle 'abudden/TagHighlight'
+Bundle 'xolox/vim-easytags'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
