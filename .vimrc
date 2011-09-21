@@ -152,17 +152,19 @@ if filereadable("~/.vim/spell/fromtags.utf-8.spl")
 endif
 cnoremap tagspell !ctags *.cpp *.c *.h; tagstospl.py -t tags fromtags; set spelllang+=fromtags
 
-"" taglist plugin settings
-"" Toggle Tag List
-"let Tlist_Use_Right_Window=1
-"let Tlist_Sort_Type = "name"
-"nnoremap <silent> <c-c> :TlistToggle<cr>
-
-" taglisttoo plugin settings
-" Toggle Tag List
-let g:TaglistTooPosition='right'
-let Tlist_Sort_Type = "name"
-nnoremap <silent> <c-c> :TlistToo<cr>
+if 1==1
+  " taglist plugin settings
+  " Toggle Tag List
+  let Tlist_Use_Right_Window=1
+  let Tlist_Sort_Type = "name"
+  nnoremap <silent> <c-c> :TlistToggle<cr>
+else
+  " taglisttoo plugin settings
+  " Toggle Tag List
+  let g:TaglistTooPosition='right'
+  let Tlist_Sort_Type = "name"
+  nnoremap <silent> <c-c> :TlistToo<cr>
+endif
 
 " For use in : mode
 " Allows running a command within a C/C++/Java function
@@ -233,11 +235,11 @@ endfunction
 " Takes whatever was last searched for and does
 " a find and replace for what you type next
 " Useful with the * command
-map <leader>r <Esc>:%s/<C-r>///g<left><left>
+map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
 
 
 " Make the enter key temporarily clear the search highlighting
-nnoremap <CR> :noh<CR><CR> " extra <CR> retains stock functionality
+nnoremap <CR> :nohlsearch<CR><CR> " extra <CR> retains stock functionality
 
 
 " Make wrapped lines act nicer {{{
