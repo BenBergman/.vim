@@ -103,16 +103,6 @@ set guioptions-=T
 " disables menubar
 set guioptions-=m
 
-" default window size
-if has('gui_running')
-  if exists("g:existingWindow") 
-    " prevents window from resizing if it is not a new window
-  else
-    let g:existingWindow=1
-    set lines=35
-    set columns=110
-  endif
-endif
 
 nnoremap <C-z> :set foldmethod=indent<return>
 
