@@ -226,6 +226,7 @@ endfunction
 " a find and replace for what you type next
 " Useful with the * command
 map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
+map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>
 
 
 " Make the enter key temporarily clear the search highlighting
