@@ -2,7 +2,6 @@
 " 1. Be iMproved {{{
 set nocompatible  "turns off Vi compatibility (always keep at top as it changes lots of settings)
 " }}} 
-
 " 2. Determine operating system {{{
 if has('unix')
   let s:os = substitute(system("uname"), "\n", "", "")
@@ -14,12 +13,62 @@ else
   set runtimepath^=~/.vim
 endif
 " }}} 
-" 3. Vundle and Bundle configuration 
+" 3. Vundle and Bundle configuration {{{
 try
   source ~/.vim/bundles.vim
 catch
 endtry
 " }}} 
+" Invert number/symbol keys while in insert mode {{{
+" You aren't hard coding your variables, are you?
+
+inoremap 1 !
+inoremap 2 @
+inoremap 3 #
+inoremap 4 $
+inoremap 5 %
+inoremap 6 ^
+inoremap 7 &
+inoremap 8 *
+inoremap 9 (
+inoremap 0 )
+
+inoremap ! 1
+inoremap @ 2
+inoremap # 3
+inoremap $ 4
+inoremap % 5
+inoremap ^ 6
+inoremap & 7
+inoremap * 8
+inoremap ( 9
+inoremap ) 0
+
+" }}}
+" Make wrapped lines act nicer {{{
+
+" Let partial lines scroll at window edges
+set display+=lastline
+
+" Make wrapped lines look nicer (or at least easier to spot)
+" TODO: make the count a function of the current indenting level and tabstop
+let &showbreak=repeat('> ', 5)
+
+" Swap g <j|k> with <j|k>
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+" }}}
+" Map <C-?> to navigate windows (where ? is each of hjkl) {{{
+
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+
+" }}}
 
 "set noea  "windows retain their size when a pane is opened or closed
 
@@ -156,6 +205,10 @@ else
   nnoremap <silent> <c-c> :TlistToo<cr>
 endif
 
+
+" Make quickfix window play nice with right column panes (ie. taglist)
+botright cwindow
+
 " For use in : mode
 " Allows running a command within a C/C++/Java function
 cmap ;tf ?^{??(?,/^}/
@@ -217,9 +270,8 @@ endif
 
 
 " Common typo correction
-function! W()
-  w
-endfunction
+command! -nargs=0 W
+\ w
 
 
 " Takes whatever was last searched for and does
@@ -233,53 +285,3 @@ map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>
 nnoremap <CR> :nohlsearch<CR><CR> " extra <CR> retains stock functionality
 
 
-" Make wrapped lines act nicer {{{
-
-" Let partial lines scroll at window edges
-set display+=lastline
-
-" Make wrapped lines look nicer (or at least easier to spot)
-" TODO: make the count a function of the current indenting level and tabstop
-let &showbreak=repeat(' .', 10)
-
-" Swap g <j|k> with <j|k>
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
-
-" }}}
-" Map <C-?> to navigate windows (where ? is each of hjkl) {{{
-
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
-
-" }}}
-" Invert number/symbol keys while in insert mode {{{
-" You aren't hard coding your variables, are you?
-
-inoremap 1 !
-inoremap 2 @
-inoremap 3 #
-inoremap 4 $
-inoremap 5 %
-inoremap 6 ^
-inoremap 7 &
-inoremap 8 *
-inoremap 9 (
-inoremap 0 )
-
-inoremap ! 1
-inoremap @ 2
-inoremap # 3
-inoremap $ 4
-inoremap % 5
-inoremap ^ 6
-inoremap & 7
-inoremap * 8
-inoremap ( 9
-inoremap ) 0
-
-" }}}
