@@ -209,7 +209,7 @@ endif
 " Make quickfix window play nice with right column panes (ie. taglist)
 cnoremap copen botright copen
 cnoremap cwindow botright cwindow
-cnoremap cw batright cwindow
+cnoremap cw botright cwindow
 
 " For use in : mode
 " Allows running a command within a C/C++/Java function
