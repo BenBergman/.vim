@@ -196,13 +196,13 @@ if 1==1
   " Toggle Tag List
   let Tlist_Use_Right_Window=1
   let Tlist_Sort_Type = "name"
-  nnoremap <silent> <c-c> :TlistToggle<cr>
+  nnoremap <silent> <c-p> :TlistToggle<cr>
 else
   " taglisttoo plugin settings
   " Toggle Tag List
   let g:TaglistTooPosition='right'
   let Tlist_Sort_Type = "name"
-  nnoremap <silent> <c-c> :TlistToo<cr>
+  nnoremap <silent> <c-p> :TlistToo<cr>
 endif
 
 
