@@ -158,6 +158,9 @@ nnoremap <C-z> :set foldmethod=indent<return>
 nnoremap <C-n> :NERDTreeToggle<return>
 
 
+map <C-c> <Esc>
+
+
 " enable mouse right clicking (not needed in macvim, not sure if still
 " compatible)
 set mousemodel=popup
@@ -287,3 +290,12 @@ map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>
 nnoremap <CR> :nohlsearch<CR><CR> " extra <CR> retains stock functionality
 
 
+" Enable the mouse in compatible terminals
+set mouse=a
+
+
+" Use system clipboard as the default register
+" NOTE: In X, the "*" buffer is the selection (ie. middle click) buffer and
+"       the "+" buffer is the cut (ie. clipboard) buffer. In Windows, both 
+"       function the same.
+set clipboard=unnamed
