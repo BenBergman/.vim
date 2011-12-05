@@ -24,6 +24,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-shell'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"
 " vim-scripts repos
 Bundle 'Align'
 Bundle 'bufexplorer.zip'
@@ -35,9 +36,11 @@ Bundle 'VisIncr'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 "Bundle 'rails.vim'
+"
 " non github repos
 Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'git://git.wincent.com/command-t.git'
+"
 " colour schemes
 Bundle 'freya'
 "Bundle 'guns/jellyx.vim'
@@ -45,8 +48,10 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
 Bundle 'BenBergman/jellyx.vim'
+"
 " syntax
 Bundle 'Arduino-syntax-file'
+Bundle 'octave.vim--'
 Bundle 'vbnet.vim'
 " ...
 

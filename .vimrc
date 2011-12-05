@@ -1,7 +1,7 @@
 " .vimrc
 " 1. Be iMproved {{{
 set nocompatible  "turns off Vi compatibility (always keep at top as it changes lots of settings)
-" }}} 
+" }}}
 " 2. Determine operating system {{{
 if has('unix')
   let s:os = substitute(system("uname"), "\n", "", "")
@@ -12,13 +12,13 @@ else
   let s:os = "Windows"
   set runtimepath^=~/.vim
 endif
-" }}} 
+" }}}
 " 3. Vundle and Bundle configuration {{{
 try
   source ~/.vim/bundles.vim
 catch
 endtry
-" }}} 
+" }}}
 " Invert number/symbol keys while in insert mode {{{
 " You aren't hard coding your variables, are you?
 
@@ -80,8 +80,15 @@ syn on    "syntax highlighting
 au BufNewFile,BufRead *.pde setlocal ft=arduino
 au BufNewFile,BufRead *.tex set syntax=tex
 
-"automatically change working directory to directory containing buffer
-autocmd BufEnter * lcd %:p:h
+" Octave syntax
+augroup filetypedetect
+  au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END
+
+"automatically change working directory (pwd) to directory containing buffer
+"autocmd BufEnter * lcd %:p:h  "disabled so that working in a project
+                               "directory makes more sense (ie. pwd not
+                               "constantly changing)
 
 set softtabstop=2
 set shiftwidth=2
@@ -167,7 +174,7 @@ set mousemodel=popup
 
 
 
-autocmd BufEnter *.m    compiler mlint
+"autocmd BufEnter *.m    compiler mlint
 
 " Octave Syntax
 "augroup filetypedetect
@@ -245,9 +252,10 @@ endif
 
 " Set a cursor column highlight
 "set cursorcolumn  " disabled because it introduces noticeable lag when
-                   " holding 'h' and 'l'
+                   " holding horizontal movement keys that change the
+                   " column
 " Set a cursor line highlight
-"set cursorline
+set cursorline
 
 
 " Allow switching of buffer without saving
@@ -267,7 +275,7 @@ endtry
 
 " When .vimrc is edited, reload it
 " TODO: Moved to .vimrc at the top of this file, so a single command might suffice
-if has('unix') 
+if has('unix')
   autocmd! bufwritepost .vimrc source ~/.vimrc
 else " Windows
   autocmd! bufwritepost _vimrc source $HOME/_vimrc " has not been verified
@@ -296,6 +304,60 @@ set mouse=a
 
 " Use system clipboard as the default register
 " NOTE: In X, the "*" buffer is the selection (ie. middle click) buffer and
-"       the "+" buffer is the cut (ie. clipboard) buffer. In Windows, both 
+"       the "+" buffer is the cut (ie. clipboard) buffer. In Windows, both
 "       function the same.
 set clipboard=unnamed
+
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+
+
+
+
+
+" vim usage notes {{{
+"
+" Use \= at the start of a replacement string to use expressions (see :help sub-replace-expression)
+"  - useful expression: line('.') <- prints the current line number (see :help line)
+"
+" i_CTRL-X_s        spelling suggestion
+" for more,   :help ins-completion
+"
+" z usually does folds
+" Vim folding commands
+" zf#j creates a fold from the cursor down # lines.
+" zf/string creates a fold from the cursor to string .
+" zj moves the cursor to the next fold.
+" zk moves the cursor to the previous fold.
+" zo opens a fold at the cursor.
+" zO opens all folds at the cursor.
+" zm increases the foldlevel by one.
+" zM closes all open folds.
+" zr decreases the foldlevel by one.
+" zR decreases the foldlevel to zero -- all folds will be open.
+" zd deletes the fold at the cursor.
+" zE deletes all folds.
+" [z move to start of open fold.
+" ]z move to end of open fold.
+"
+" zi appears to open/close all folds
+"
+" :set foldmethod=indent
+"
+" :mkview to save folds and syntax
+" :loadview or :lo to load saved folds and syntax
+"
+" :sh to go to a shell
+" :! <command> to execute a command from inside vim
+"
+" :help holy-grail	<< lists all (stock) : commands
+"
+"
+" ^g    shows file name and location in file
+" g^g  shows word count and stuff cursor location
+"
+" gd    go to first instance of word
+"
+" }}}
