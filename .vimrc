@@ -287,31 +287,48 @@ command! -nargs=0 W
 \ w
 
 
+" Find and replace last search query {{{
+
 " Takes whatever was last searched for and does
 " a find and replace for what you type next
 " Useful with the * command
 map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
 map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>
 
+" }}}
+" Mappings for linediff plugin {{{
 
-" Make the enter key temporarily clear the search highlighting
+vnoremap <leader>ld :Linediff<CR>
+nnoremap <leader>ld V:Linediff<CR>
+noremap <leader>ldr :LinediffReset<CR>
+
+" }}}
+" Make the enter key temporarily clear the search highlighting {{{
+
 nnoremap <CR> :nohlsearch<CR><CR> " extra <CR> retains stock functionality
 
+" }}}
+" Enable the mouse in compatible terminals {{{
 
-" Enable the mouse in compatible terminals
 set mouse=a
 
+" }}}
+" Use system clipboard as the default register {{{
 
-" Use system clipboard as the default register
 " NOTE: In X, the "*" buffer is the selection (ie. middle click) buffer and
 "       the "+" buffer is the cut (ie. clipboard) buffer. In Windows, both
 "       function the same.
 set clipboard=unnamed
 
+" }}}
 
-" Highlight trailing whitespace
+
+" Highlight trailing whitespace {{{
+
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
+
+" }}}
 
 
 
@@ -344,6 +361,8 @@ match ExtraWhitespace /\s\+$/
 "
 " zi appears to open/close all folds
 "
+" :set foldmethod is the same as :set fdm
+" :set foldmethod=marker " matches {{{ and }}} markers for folding
 " :set foldmethod=indent
 "
 " :mkview to save folds and syntax

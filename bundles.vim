@@ -24,6 +24,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-shell'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'AndrewRadev/linediff.vim'
 "
 " vim-scripts repos
 Bundle 'Align'
