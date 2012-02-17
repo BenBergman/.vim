@@ -287,6 +287,11 @@ command! -nargs=0 W
 \ w
 
 
+" vcscommand options {{{
+
+let VCSCommandCVSDiffOpt="u"
+
+" }}}
 " Find and replace last search query {{{
 
 " Takes whatever was last searched for and does
