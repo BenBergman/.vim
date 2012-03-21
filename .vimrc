@@ -334,6 +334,12 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
 " }}}
+"
+" Diff options {{{
+
+set diffopt+=vertical  " force vertical diff splits
+
+" }}}
 
 
 

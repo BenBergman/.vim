@@ -50,6 +50,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'xoria256.vim'
 Bundle 'BenBergman/ir_black-custom'
 Bundle 'BenBergman/jellyx.vim'
+Bundle 'BenBergman/vsearch.vim'
 "
 " syntax
 Bundle 'Arduino-syntax-file'
