@@ -96,7 +96,7 @@ set tabstop=2
 set expandtab
 
 "network
-let NERDTreeShowHidden=1
+"let NERDTreeShowHidden=1
 
 " scrollbars
 set guioptions-=R
@@ -282,9 +282,6 @@ else " Windows
 endif
 
 
-" Common typo correction
-command! -nargs=0 W
-\ w
 
 
 " vcscommand options {{{
@@ -341,7 +338,17 @@ set diffopt+=vertical  " force vertical diff splits
 
 " }}}
 
+" Ex command aliases {{{
 
+" Common typo correction
+command! -nargs=0 W
+\ w
+
+" Qt makefile generation
+command! -nargs=0 Qmake
+\ !qmake
+
+" }}}
 
 
 
