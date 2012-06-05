@@ -80,7 +80,7 @@ syn on    "syntax highlighting
 au BufNewFile,BufRead *.pde setlocal ft=arduino
 au BufNewFile,BufRead *.ino setlocal ft=arduino
 au Filetype arduino set errorformat^=\%-G%.%#/usr/share/arduino/%.%#
-au Filetype arduino set makeprg=scons " use scons for the :make command
+au Filetype arduino set makeprg=scons " use scons for the :make command (uses the arscons SConstruct file from here: http://arscons.googlecode.com/git/SConstruct)
 au BufNewFile,BufRead *.tex set syntax=tex
 
 " Octave syntax
