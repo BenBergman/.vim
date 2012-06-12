@@ -353,5 +353,8 @@ command! -nargs=0 Qmake
 
 " }}}
 
+" VimRepress (Wordpress plugin) settings {{{
 
+let VIMPRESS = [{'username':'ben', 'blog_url':'http://blog.benbergman.ca'}]
 
+" }}}
