@@ -78,6 +78,9 @@ syn on    "syntax highlighting
 
 "au BufNewFile,BufRead *.pde setfiletype java
 au BufNewFile,BufRead *.pde setlocal ft=arduino
+au BufNewFile,BufRead *.ino setlocal ft=arduino
+au Filetype arduino set errorformat^=\%-G%.%#/usr/share/arduino/%.%#
+au Filetype arduino set makeprg=scons " use scons for the :make command (uses the arscons SConstruct file from here: http://arscons.googlecode.com/git/SConstruct)
 au BufNewFile,BufRead *.tex set syntax=tex
 
 " Octave syntax
@@ -350,5 +353,8 @@ command! -nargs=0 Qmake
 
 " }}}
 
+" VimRepress (Wordpress plugin) settings {{{
 
+let VIMPRESS = [{'username':'ben', 'blog_url':'https://blog.benbergman.ca'}]
 
+" }}}
