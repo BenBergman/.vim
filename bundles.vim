@@ -27,6 +27,7 @@ Bundle 'xolox/vim-shell'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'sudar/vim-scmdiff'
+Bundle 'dahu/LearnVim'
 "
 " vim-scripts repos
 Bundle 'Align'
