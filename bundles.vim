@@ -28,6 +28,9 @@ Bundle 'xolox/vim-shell'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'sudar/vim-scmdiff'
 Bundle 'dahu/LearnVim'
+
+" Remap <Space> to repeat motions
+Bundle 'spiiph/vim-space'
 "
 " vim-scripts repos
 Bundle 'Align'
