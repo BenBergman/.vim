@@ -360,8 +360,11 @@ let VIMREPRESS = VIMPRESS
 
 " }}}
 
-" Always show statusline {{{
+" Setup statusline {{{
 
+" Always show statusline
 set laststatus=2
+" use the default fugitive statusline
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " }}}
