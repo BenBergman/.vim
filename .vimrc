@@ -359,3 +359,9 @@ let VIMPRESS = [{'username':'ben', 'blog_url':'https://blog.benbergman.ca'}]
 let VIMREPRESS = VIMPRESS
 
 " }}}
+
+" Always show statusline {{{
+
+set statusline=2
+
+" }}}
