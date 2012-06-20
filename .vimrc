@@ -362,6 +362,6 @@ let VIMREPRESS = VIMPRESS
 
 " Always show statusline {{{
 
-set statusline=2
+set laststatus=2
 
 " }}}
