@@ -14,8 +14,15 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'mileszs/ack.vim'
+"
+" Tag highlighting
 "Bundle 'abudden/TagHighlight'
 Bundle 'xolox/vim-easytags'
+"
+" Tag List
+"Bundle 'taglist.vim'
+Bundle 'majutsushi/tagbar'
+
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
@@ -38,7 +45,6 @@ Bundle 'bufexplorer.zip'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'doxygen-support.vim'
 Bundle 'keepcase.vim'
-Bundle 'taglist.vim'
 Bundle 'VisIncr'
 "Bundle 'VimRepress'
 Bundle 'connermcd/VimRepress'
