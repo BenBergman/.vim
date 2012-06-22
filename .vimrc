@@ -367,6 +367,8 @@ let VIMREPRESS = VIMPRESS
 " Always show statusline
 set laststatus=2
 " use the default statusline plus the fugitive and tagbar additions
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{tagbar#currenttag('[%s]','')}%=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{tagbar#currenttag('[%s]','')}%=%-14.(%l,%c%V%)\ %P
+" stuff for Powerline
+"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " }}}

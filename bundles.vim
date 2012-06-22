@@ -23,6 +23,9 @@ Bundle 'xolox/vim-easytags'
 "Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 
+" Improves the appearance of the statusline
+Bundle 'Lokaltog/vim-powerline'
+
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
