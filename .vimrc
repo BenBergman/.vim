@@ -221,10 +221,17 @@ nnoremap <silent> <c-p> :TagbarToggle<CR>
 "nnoremap <silent> <c-p> :TlistToo<cr>
 
 
+" QuickList settings {{{
+
 " Make quickfix window play nice with right column panes (ie. taglist)
 cnoremap copen botright copen
 cnoremap cwindow botright cwindow
 cnoremap cw botright cwindow
+
+" Turn off spell check in the quickfix buffer
+autocmd Filetype qf setlocal nospell
+
+" }}}
 
 " For use in : mode
 " Allows running a command within a C/C++/Java function
