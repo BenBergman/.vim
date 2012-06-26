@@ -230,6 +230,7 @@ cnoremap cw botright cwindow
 
 " Turn off spell check in the quickfix buffer
 autocmd Filetype qf setlocal nospell
+autocmd Filetype qf setlocal nobuflisted
 
 " }}}
 
