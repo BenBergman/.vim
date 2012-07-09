@@ -10,56 +10,52 @@ call vundle#rc()
 " required for vundle
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'mileszs/ack.vim'
-"
+" Bundles can be listed as vim-scripts repositories
+"   Bundle 'Align'
+" as GitHub repositories
+"   Bundle 'tpope/vim-fugitive'
+" or as full git URLs
+"   Bundle 'git://repo.or.cz/vcscommand'
+
 " Tag highlighting
 "Bundle 'abudden/TagHighlight'
 Bundle 'xolox/vim-easytags'
-"
+
 " Tag List
 "Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
-
-" Improves the appearance of the statusline
-Bundle 'Lokaltog/vim-powerline'
-
-Bundle 'mattn/gist-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-fugitive'
 "Bundle 'ervandew/taglisttoo'
-Bundle 'xolox/vim-shell'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'AndrewRadev/linediff.vim'
-Bundle 'sudar/vim-scmdiff'
-Bundle 'dahu/LearnVim'
 
+" Version control tools
+Bundle 'mattn/gist-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'sudar/vim-scmdiff'
+Bundle 'git://repo.or.cz/vcscommand'
+
+" Text formatting tools
+Bundle 'tpope/vim-surround'
+Bundle 'Align'
+Bundle 'keepcase.vim'
+Bundle 'VisIncr'
+Bundle 'AndrewRadev/linediff.vim'
+
+" File management tools
+Bundle 'scrooloose/nerdtree'
+Bundle 'bufexplorer.zip'
+
+" Extra controls/commands
+Bundle 'tpope/vim-unimpaired'
 " Remap <Space> to repeat motions
 Bundle 'spiiph/vim-space'
 "
-" vim-scripts repos
-Bundle 'Align'
-Bundle 'bufexplorer.zip'
+" Improves the appearance of the statusline
+Bundle 'Lokaltog/vim-powerline'
+
+" Code documentation tools
 Bundle 'DoxygenToolkit.vim'
 Bundle 'doxygen-support.vim'
-Bundle 'keepcase.vim'
-Bundle 'VisIncr'
-"Bundle 'VimRepress'
-Bundle 'connermcd/VimRepress'
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-"Bundle 'rails.vim'
-"
-" non github repos
-Bundle 'git://repo.or.cz/vcscommand'
-"Bundle 'git://git.wincent.com/command-t.git'
-"
-" colour schemes
+
+" Colour schemes
 Bundle 'freya'
 "Bundle 'guns/jellyx.vim'
 Bundle 'nanotech/jellybeans.vim'
@@ -69,14 +65,26 @@ Bundle 'BenBergman/ir_black-custom'
 Bundle 'BenBergman/jellyx.vim'
 Bundle 'BenBergman/vsearch.vim'
 "
-" syntax
+" Syntax
 Bundle 'Arduino-syntax-file'
 Bundle 'octave.vim--'
 Bundle 'vbnet.vim'
+
+" Other
+Bundle 'connermcd/VimRepress'
+Bundle 'mileszs/ack.vim'
+Bundle 'xolox/vim-shell'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'dahu/LearnVim'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+"Bundle 'rails.vim'
+"Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
 filetype plugin indent on     " required for vundle
-"
+
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install(update) bundles
