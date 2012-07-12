@@ -344,7 +344,13 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
 " }}}
-"
+
+" Alias for gundo {{{
+
+nnoremap <leader>u :GundoToggle<CR>
+
+" }}}
+
 " Diff options {{{
 
 set diffopt+=vertical  " force vertical diff splits

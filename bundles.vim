@@ -31,13 +31,21 @@ Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sudar/vim-scmdiff'
 Bundle 'git://repo.or.cz/vcscommand'
+Bundle 'sjl/gundo.vim'
 
 " Text formatting tools
 Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'Align'
 Bundle 'keepcase.vim'
 Bundle 'VisIncr'
 Bundle 'AndrewRadev/linediff.vim'
+
+" Snipmate (with requirements loaded first)
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
 
 " File management tools
 Bundle 'scrooloose/nerdtree'
@@ -47,7 +55,9 @@ Bundle 'bufexplorer.zip'
 Bundle 'tpope/vim-unimpaired'
 " Remap <Space> to repeat motions
 Bundle 'spiiph/vim-space'
-"
+Bundle 'edsono/vim-matchit'
+Bundle 'Lokaltog/vim-easymotion'
+
 " Improves the appearance of the statusline
 Bundle 'Lokaltog/vim-powerline'
 
@@ -64,11 +74,17 @@ Bundle 'croaker/mustang-vim'
 Bundle 'BenBergman/ir_black-custom'
 Bundle 'BenBergman/jellyx.vim'
 Bundle 'BenBergman/vsearch.vim'
-"
+Bundle 'tpope/vim-vividchalk'
+
 " Syntax
 Bundle 'Arduino-syntax-file'
 Bundle 'octave.vim--'
 Bundle 'vbnet.vim'
+Bundle 'skammer/vim-css-color'
+Bundle 'scrooloose/syntastic'
+Bundle 'csv.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-markdown'
 
 " Other
 Bundle 'connermcd/VimRepress'
@@ -81,7 +97,6 @@ Bundle 'dahu/LearnVim'
 "Bundle 'FuzzyFinder'
 "Bundle 'rails.vim'
 "Bundle 'git://git.wincent.com/command-t.git'
-" ...
 
 filetype plugin indent on     " required for vundle
 
