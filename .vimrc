@@ -351,6 +351,12 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " }}}
 
+" Fix conflict between vim-css-color and easytags {{{
+
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" }}}
+
 " Diff options {{{
 
 set diffopt+=vertical  " force vertical diff splits
