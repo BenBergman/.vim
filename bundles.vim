@@ -35,6 +35,7 @@ Bundle 'sjl/gundo.vim'
 
 " Text formatting tools
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-speeddating'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Align'
 Bundle 'keepcase.vim'
