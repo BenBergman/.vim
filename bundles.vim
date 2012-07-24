@@ -90,6 +90,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'connermcd/VimRepress'
 Bundle 'mileszs/ack.vim'
 Bundle 'xolox/vim-shell'
+Bundle 'benmills/vimux'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'dahu/LearnVim'
