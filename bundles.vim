@@ -83,7 +83,7 @@ Bundle 'octave.vim--'
 Bundle 'vbnet.vim'
 Bundle 'skammer/vim-css-color'
 Bundle 'scrooloose/syntastic'
-Bundle 'csv.vim'
+Bundle 'chrisbra/csv.vim'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-markdown'
 
