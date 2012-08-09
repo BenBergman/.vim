@@ -392,3 +392,18 @@ set laststatus=2
 "call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " }}}
+
+
+" Highlight lines in excess of 80 characters {{{
+
+" from here: http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+" I'm not sure I like the colorcolumn method...
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  "au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+  match OverLength /\%81v.\+/
+endif
+
+" }}}
