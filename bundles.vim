@@ -18,8 +18,8 @@ Bundle 'gmarik/vundle'
 "   Bundle 'git://repo.or.cz/vcscommand'
 
 " Tag highlighting
-"Bundle 'abudden/TagHighlight'
-Bundle 'xolox/vim-easytags'
+Bundle 'BenBergman/TagHighlight'
+"Bundle 'xolox/vim-easytags'
 
 " Tag List
 "Bundle 'taglist.vim'
