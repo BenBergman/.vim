@@ -59,6 +59,10 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+vnoremap j gj
+vnoremap k gk
+vnoremap gj j
+vnoremap gk k
 
 " }}}
 " Map <C-?> to navigate windows (where ? is each of hjkl) {{{
