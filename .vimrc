@@ -374,8 +374,8 @@ command! -nargs=0 W
 \ w
 
 " Qt makefile generation
-command! -nargs=0 Qmake
-\ !qmake
+command! -nargs=* Qmake
+\ !qmake <args>
 
 " }}}
 
