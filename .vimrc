@@ -411,3 +411,11 @@ else
 endif
 
 " }}}
+"
+" Show the name of the keyword type (for syntax highlighting purposes)
+" directly under cursor (useful for editing colour schemes) {{{
+
+map <F8> :echo synIDattr(synID(line("."),col("."),1),"name")<cr>
+
+" }}}
+
