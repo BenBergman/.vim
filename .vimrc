@@ -161,6 +161,23 @@ set noexpandtab
 " From http://vim.wikia.com/wiki/Super_retab
 command! -nargs=1 -range SuperRetab <line1>,<line2>s/\v%(^ *)@<= {<args>}/\t/g
 
+" Command to expand tabs only if non-leading (ie. non-indent) tabs.
+" Useful for aligning things that are at the same indent level.
+" Commented out as map conflicts with SnipMate and only 7.3 compatible
+"function! IndentPlix()
+"	let line = getline('.')
+"	if line =~ '^\t*$'
+"		return "\<tab>"
+"	else
+"		" Function only work in 7.3
+"		let length = strdisplaywidth(line)
+"		let spaces = &ts - (length % &ts)
+"		return repeat(' ', spaces)
+"	endif
+"endfunction
+"
+"inoremap <expr> <Tab> IndentPlix()
+
 
 " disables toolbar
 set guioptions-=T
