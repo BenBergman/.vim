@@ -97,11 +97,6 @@ augroup END
                                "directory makes more sense (ie. pwd not
                                "constantly changing)
 
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
-set expandtab
-
 "network
 "let NERDTreeShowHidden=1
 
@@ -156,9 +151,16 @@ set linebreak
 
 "set smartindent
 set cindent
-set expandtab
-set tabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set noexpandtab
+
+" Command to convert leading spaces into tabs (arg is the number of existing
+" spaces per tab character)
+" From http://vim.wikia.com/wiki/Super_retab
+command! -nargs=1 -range SuperRetab <line1>,<line2>s/\v%(^ *)@<= {<args>}/\t/g
+
 
 " disables toolbar
 set guioptions-=T
