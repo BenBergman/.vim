@@ -19,6 +19,7 @@ Bundle 'gmarik/vundle'
 
 " Tag highlighting
 Bundle 'BenBergman/TagHighlight'
+Bundle 'TagManager'
 "Bundle 'xolox/vim-easytags'
 
 " Tag List
@@ -41,6 +42,7 @@ Bundle 'Align'
 Bundle 'keepcase.vim'
 Bundle 'VisIncr'
 Bundle 'AndrewRadev/linediff.vim'
+Bundle 'IndentTab'
 
 " Snipmate (with requirements loaded first)
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -65,6 +67,9 @@ Bundle 'Lokaltog/vim-powerline'
 " Code documentation tools
 Bundle 'DoxygenToolkit.vim'
 Bundle 'doxygen-support.vim'
+
+" Use gvim colour schemes in terminal
+Bundle 'colorsupport.vim'
 
 " Colour schemes
 Bundle 'freya'

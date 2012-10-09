@@ -421,3 +421,19 @@ map <F8> :echo synIDattr(synID(line("."),col("."),1),"name")<cr>
 
 " }}}
 
+
+" Supposed to enable IndentTab plugin
+let g:IndentTab_scopes='indent,commentprefix,string'
+
+
+" Settings for TagManager+TagHighlight
+if !exists('g:TagHighlightSettings')
+  let g:TagHighlightSettings = {}
+endif
+let g:TagHighlightSettings['LanguageDetectionMethods'] =
+			\ ['Extension', 'FileType']
+let g:TagHighlightSettings['FileTypeLanguageOverrides'] =
+			\ {'svn': 'c', 'tagbar': 'c'}
+
+let g:TagMgrTagsdir="$HOME/.vim/tags"
+let g:TagMgrDataFile="$HOME/.vim/vim-TagManager.conf"
