@@ -92,6 +92,9 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
 
+" Compile coffescript on write
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+
 "automatically change working directory (pwd) to directory containing buffer
 "autocmd BufEnter * lcd %:p:h  "disabled so that working in a project
                                "directory makes more sense (ie. pwd not

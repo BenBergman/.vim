@@ -86,6 +86,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'chrisbra/csv.vim'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
 
 " Other
 Bundle 'connermcd/VimRepress'
