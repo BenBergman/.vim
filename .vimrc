@@ -192,6 +192,7 @@ nnoremap <C-n> :NERDTreeToggle<return>
 
 
 map <C-c> <Esc>
+smap <C-c> <Esc>
 
 
 " enable mouse right clicking (not needed in macvim, not sure if still
