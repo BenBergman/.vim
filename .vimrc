@@ -442,6 +442,13 @@ map <F8> :echo synIDattr(synID(line("."),col("."),1),"name")<cr>
 
 " }}}
 
+" Open office documents as the zip files they are {{{
+"
+au BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
+au BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
+
+" }}}
+"
 " Enable modelines {{{
 
 set modeline
