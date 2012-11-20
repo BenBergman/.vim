@@ -442,3 +442,8 @@ map <F8> :echo synIDattr(synID(line("."),col("."),1),"name")<cr>
 
 " }}}
 
+" Enable modelines {{{
+
+set modeline
+
+" }}}
