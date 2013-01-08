@@ -87,6 +87,8 @@ au Filetype arduino set errorformat^=\%-G%.%#/usr/share/arduino/%.%#
 au Filetype arduino set makeprg=scons " use scons for the :make command (uses the arscons SConstruct file from here: http://arscons.googlecode.com/git/SConstruct)
 au BufNewFile,BufRead *.tex set syntax=tex
 
+autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+
 " Octave syntax
 augroup filetypedetect
   au! BufRead,BufNewFile *.m,*.oct set filetype=octave
