@@ -3,6 +3,8 @@ set nocompatible  "turns off Vi compatibility (always keep at top as it changes 
 filetype on       "needed for vim on mac?
 filetype off      "required for vundle
 
+let g:vundle_default_git_proto = 'git'
+
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -41,6 +43,7 @@ Bundle 'Align'
 Bundle 'keepcase.vim'
 Bundle 'VisIncr'
 Bundle 'AndrewRadev/linediff.vim'
+Bundle 'tpope/vim-abolish'
 
 " Snipmate (with requirements loaded first)
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -77,16 +80,18 @@ Bundle 'BenBergman/jellyx.vim'
 Bundle 'BenBergman/vsearch.vim'
 Bundle 'tpope/vim-vividchalk'
 
-" Syntax
+" Syntax/language
 Bundle 'Arduino-syntax-file'
 Bundle 'octave.vim--'
 Bundle 'vbnet.vim'
-Bundle 'skammer/vim-css-color'
+"Bundle 'skammer/vim-css-color'
+Bundle 'chrisbra/color_highlight'
 Bundle 'scrooloose/syntastic'
 Bundle 'chrisbra/csv.vim'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-rails'
 
 " Other
 Bundle 'connermcd/VimRepress'
