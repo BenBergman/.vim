@@ -19,6 +19,17 @@ try
 catch
 endtry
 " }}}
+" Set default backup and swap directories {{{
+" The double path separator tells vim to ensure unique file names are used
+set backupdir=$HOME/.vim/backup//
+set directory=$HOME/.vim/swap//
+" Persistent undo (vim 7.3 and newer)
+try
+  set undofile
+  set undodir=$HOME/.vim/undodir// "does this work in Windows?
+catch
+endtry
+" }}}
 " Invert number/symbol keys while in insert mode {{{
 " You aren't hard coding your variables, are you?
 
@@ -307,12 +318,6 @@ set hidden
 
 
 
-" Persistent undo (vim 7.3 and newer)
-try
-  set undodir=$HOME/.vim/undodir "does this work in Windows?
-  set undofile
-catch
-endtry
 
 
 " When .vimrc is edited, reload it
