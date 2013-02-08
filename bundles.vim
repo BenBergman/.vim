@@ -31,7 +31,7 @@ Bundle 'majutsushi/tagbar'
 " Version control tools
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'sudar/vim-scmdiff'
+"Bundle 'sudar/vim-scmdiff'
 Bundle 'git://repo.or.cz/vcscommand'
 Bundle 'sjl/gundo.vim'
 
@@ -44,6 +44,7 @@ Bundle 'keepcase.vim'
 Bundle 'VisIncr'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'tpope/vim-abolish'
+Bundle 'IndentTab'
 
 " Snipmate (with requirements loaded first)
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -61,6 +62,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'spiiph/vim-space'
 Bundle 'edsono/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Valloric/YouCompleteMe'
 
 " Improves the appearance of the statusline
 Bundle 'Lokaltog/vim-powerline'
@@ -92,6 +94,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-rails'
+Bundle 'rantenki/vim-openscad'
 
 " Other
 Bundle 'connermcd/VimRepress'
