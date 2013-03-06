@@ -331,6 +331,9 @@ endif
 
 
 
+" Clear SignColumn hilighting for vim-gitgutter {{{
+highlight clear SignColumn
+" }}}
 " vcscommand options {{{
 
 let VCSCommandCVSDiffOpt="u"
