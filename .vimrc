@@ -370,33 +370,27 @@ set mouse=a
 set clipboard=unnamed
 
 " }}}
-
-
 " Highlight trailing whitespace {{{
 
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
 " }}}
-
 " Alias for gundo {{{
 
 nnoremap <leader>u :GundoToggle<CR>
 
 " }}}
-
 " Fix conflict between vim-css-color and easytags {{{
 
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " }}}
-
 " Diff options {{{
 
 set diffopt+=vertical  " force vertical diff splits
 
 " }}}
-
 " Ex command aliases {{{
 
 " Common typo correction
@@ -408,14 +402,12 @@ command! -nargs=* Qmake
 \ !qmake <args>
 
 " }}}
-
 " VimRepress (Wordpress plugin) settings {{{
 
 let VIMPRESS = [{'username':'ben', 'blog_url':'https://blog.benbergman.ca'}]
 let VIMREPRESS = VIMPRESS
 
 " }}}
-
 " Setup statusline {{{
 
 " Always show statusline
@@ -426,8 +418,6 @@ set laststatus=2
 "call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " }}}
-
-
 " Highlight lines in excess of 80 characters {{{
 
 " from here: http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
@@ -441,21 +431,18 @@ else
 endif
 
 " }}}
-"
 " Show the name of the keyword type (for syntax highlighting purposes)
 " directly under cursor (useful for editing colour schemes) {{{
 
 map <F8> :echo synIDattr(synID(line("."),col("."),1),"name")<cr>
 
 " }}}
-
 " Open office documents as the zip files they are {{{
 "
 au BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
 au BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 
 " }}}
-"
 " Enable modelines {{{
 
 set modeline
