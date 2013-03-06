@@ -31,6 +31,7 @@ Bundle 'majutsushi/tagbar'
 " Version control tools
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 "Bundle 'sudar/vim-scmdiff'
 Bundle 'git://repo.or.cz/vcscommand'
 Bundle 'sjl/gundo.vim'
