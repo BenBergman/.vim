@@ -80,8 +80,10 @@ Bundle 'xoria256.vim'
 Bundle 'croaker/mustang-vim'
 Bundle 'BenBergman/ir_black-custom'
 Bundle 'BenBergman/jellyx.vim'
-Bundle 'BenBergman/vsearch.vim'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'BenBergman/vsearch.vim'
 
 " Syntax/language
 Bundle 'Arduino-syntax-file'

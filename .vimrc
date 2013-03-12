@@ -132,12 +132,17 @@ set incsearch
 " Make sure to declare this before loading a colorscheme
 set t_Co=256
 
-if has('gui_running')
-  colorscheme ir_black-custom
-else
-  "colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
-  colorscheme jellyx "only until I update ir_black-custom to work with 256 colour terminals
-endif
+"if has('gui_running')
+"  colorscheme ir_black-custom
+"else
+"  "colorscheme jellyx-custom "only until I update ir_black-custom to work with 256 colour terminals
+"  colorscheme jellyx "only until I update ir_black-custom to work with 256 colour terminals
+"endif
+
+set background=dark
+colorscheme solarized
+let g:Powerline_theme = 'solarized16'
+let g:Powerline_colorscheme = 'solarized16'
 
 set number
 
