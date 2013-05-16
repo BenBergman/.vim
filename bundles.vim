@@ -65,6 +65,7 @@ Bundle 'spiiph/vim-space'
 Bundle 'edsono/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'myusuf3/numbers.vim'
 
 " Improves the appearance of the statusline
 Bundle 'Lokaltog/vim-powerline'
