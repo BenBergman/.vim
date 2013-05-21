@@ -113,6 +113,8 @@ Bundle 'dahu/LearnVim'
 "Bundle 'FuzzyFinder'
 "Bundle 'rails.vim'
 "Bundle 'git://git.wincent.com/command-t.git'
+"
+Bundle 'FredKSchott/CoVim'
 
 filetype plugin indent on     " required for vundle
 
