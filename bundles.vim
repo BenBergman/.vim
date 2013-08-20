@@ -66,6 +66,7 @@ Bundle 'edsono/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " Improves the appearance of the statusline
 Bundle 'Lokaltog/vim-powerline'
@@ -104,6 +105,7 @@ Bundle 'rantenki/vim-openscad'
 " Other
 Bundle 'connermcd/VimRepress'
 Bundle 'mileszs/ack.vim'
+Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-shell'
 Bundle 'benmills/vimux'
 "Bundle 'Lokaltog/vim-easymotion'
